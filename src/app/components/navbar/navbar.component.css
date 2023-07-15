@@ -1,0 +1,22 @@
+/* Estilos gerais da navbar */
+.navbar {
+  background-color: #333;
+  color: #0b0b0b;
+  padding: 20px;
+}
+
+/* Estilos dos itens de navegação */
+.nav-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.logo {
+  float: right;
+}

@@ -1,0 +1,12 @@
+.example-container {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 88%;
+}
+
+.example-sidenav-content {
+  height: 92%;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
