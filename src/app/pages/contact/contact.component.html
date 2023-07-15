@@ -1,1 +1,25 @@
-<p>Pagina Contato</p>
+<p>
+<div class="container">
+  <mat-card>
+    <mat-card-content>
+      <mat-card-title>Fale conosco</mat-card-title>
+      <form class="contact-form">
+        <mat-form-field>
+          <mat-label>Nome</mat-label>
+          <input matInput name="fullname" placeholder="Informe o nome">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput name="email" placeholder="Informe o email">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Mensagem</mat-label>
+          <textarea   matInput name="message" placeholder="Informe a mensagem"></textarea>
+        </mat-form-field>
+        <div class="example-button-row direita">
+          <button mat-button color="primary">Enviar</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

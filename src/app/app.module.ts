@@ -12,6 +12,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatListModule,
     MatIconModule,
     MatButtonModule,
+    MatInputModule,
+    MatCardModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
