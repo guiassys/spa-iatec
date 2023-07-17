@@ -1,0 +1,23 @@
+.welcome-card {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.news-item {
+  margin-bottom: 20px;
+}
+
+img {
+  width: 50%;
+  height: auto;
+}
+
+.card-row{
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.card-row span{
+  padding: 10px;
+}

@@ -1,3 +1,22 @@
-<p>Home Page</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Bem-Vindo ao Nosso Portal de Notícias</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <mat-card-subtitle>Confira as últimas notícias</mat-card-subtitle>
+  </mat-card-content>
+</mat-card>
+
+<div *ngFor="let news of newsList" class="news-item">
+  <mat-card class="welcome-card">
+    <mat-card-header>
+      <mat-card-title>{{ news.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="card-row">
+        <img src="{{ news.image }}" alt="Imagem Ilustrativa">
+        <span>{{ news.content }}</span>
+    </mat-card-content>
+  </mat-card>
+</div>
 
 

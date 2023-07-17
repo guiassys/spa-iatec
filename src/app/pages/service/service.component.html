@@ -1,3 +1,21 @@
-<p>Service Page</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Lista de serviços</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <mat-card-subtitle>Nossa empresa é reconhecida por oferecer serviços de alta qualidade, garantindo excelência em cada projeto.</mat-card-subtitle>
+  </mat-card-content>
+</mat-card>
+<p>
+<mat-card *ngFor="let service of services" class="service-card">
+  <mat-card-header>
+    <img mat-card-avatar src="{{ service.image }}" alt="Imagem Ilustrativa">
+    <mat-card-title>{{ service.title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ service.description }}</p>
+    <p><strong>Preço: {{ service.price }}</strong></p>
+  </mat-card-content>
+</mat-card>
 
 

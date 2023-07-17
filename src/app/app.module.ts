@@ -16,14 +16,22 @@ import { MatInputModule} from '@angular/material/input';
 import { MatCardModule} from '@angular/material/card';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './pages/login/login.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ServiceComponent } from './pages/service/service.component';
+import { SlidebarComponent } from './components/slidebar/slidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    AboutComponent,
+    ServiceComponent,
     ContactComponent,
     NavbarComponent,
-    FooterComponent
+    SlidebarComponent,
+    FooterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
