@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  nome:string;
+  email:string;
+  mensagem:string;
+
+  constructor(){
+    this.nome="";
+    this.email="";
+    this.mensagem="";
+  }
+
+  sendForm():void{
+
+    console.log("Formulário enviado");
+    console.log(this.nome);
+    console.log(this.email);
+    console.log(this.mensagem);
+  }
 }

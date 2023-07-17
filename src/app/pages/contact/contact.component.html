@@ -3,23 +3,23 @@
   <mat-card>
     <mat-card-content>
       <mat-card-title>Fale conosco</mat-card-title>
-      <form class="contact-form">
+      <div class="contact-form">
         <mat-form-field>
           <mat-label>Nome</mat-label>
-          <input matInput name="fullname" placeholder="Informe o nome">
+          <input required [(ngModel)]="nome" name="nome" matInput placeholder="Informe o nome">
         </mat-form-field>
         <mat-form-field>
           <mat-label>Email</mat-label>
-          <input matInput name="email" placeholder="Informe o email">
+          <input required [(ngModel)]="email" name="email" type="email" matInput  placeholder="Informe o email">
         </mat-form-field>
         <mat-form-field>
           <mat-label>Mensagem</mat-label>
-          <textarea   matInput name="message" placeholder="Informe a mensagem"></textarea>
+          <textarea [(ngModel)]="mensagem"  name="mensagem" matInput placeholder="Informe a mensagem"></textarea>
         </mat-form-field>
         <div class="example-button-row direita">
-          <button mat-button color="primary">Enviar</button>
+          <button mat-button color="primary" (click)="sendForm()" >Enviar</button>
         </div>
-      </form>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>
