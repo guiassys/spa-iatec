@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule} from '@angular/material/sidenav';
@@ -44,6 +45,7 @@ import { SlidebarComponent } from './components/slidebar/slidebar.component';
     MatInputModule,
     MatCardModule,
     MatFormFieldModule,
+    MatToolbarModule,
     FormsModule,
   ],
   providers: [],

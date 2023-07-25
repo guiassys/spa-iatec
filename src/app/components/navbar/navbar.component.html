@@ -1,21 +1,9 @@
-<nav class="navbar">
-  <div class="navbar-brand">
-    <a class="navbar-logo" href="#">
-      <img src="assets/iatec-logo.png" alt="Logo da IATEC" class="logo">
-    </a>
-  </div>
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="login">Login</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="home">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="about">Sobre</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="contact">Contato</a>
-    </li>
-  </ul>
-</nav>
+<p>
+  <mat-toolbar>
+   <button (click)="showMenu()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>IATEC Academy - Angular Material</span>
+  <span class="example-spacer"></span>
+</mat-toolbar>
+</p>

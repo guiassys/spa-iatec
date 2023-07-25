@@ -1,12 +1,4 @@
-<app-navbar></app-navbar>
-
-<section>
-  <div class="example-button-row">
-    <button mat-stroked-button color="primary" type="button" mat-button (click)="drawer.toggle()">
-      <mat-icon aria-hidden="false" aria-label="Abrir e fechar menu" fontIcon="density_medium"></mat-icon>
-    </button>
-  </div>
-</section>
+<app-navbar [Drawer]="drawer" ></app-navbar>
 
 <mat-drawer-container class="example-container" autosize>
 
