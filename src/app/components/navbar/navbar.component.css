@@ -29,3 +29,16 @@
 .logged-user{
   float: right;
 }
+
+mat-toolbar{
+  background-color: #333;
+}
+
+mat-toolbar span {
+  color: #fff;
+}
+
+mat-toolbar label {
+  color: rgb(144, 118, 148);
+  font-size: 12px;
+}
