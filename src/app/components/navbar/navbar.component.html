@@ -1,9 +1,13 @@
 <p>
   <mat-toolbar>
    <button (click)="showMenu()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>IATEC Academy - Angular Material</span>
-  <span class="example-spacer"></span>
-</mat-toolbar>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>IATEC Academy - Angular Material</span>
+    <span class="example-spacer"></span>
+    <div class="div-logged-user">
+      <label class="logged-user">{{usuarioLogado}}</label>
+    </div>
+  </mat-toolbar>
 </p>
+

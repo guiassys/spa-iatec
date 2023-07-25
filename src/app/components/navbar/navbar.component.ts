@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { SharedService } from 'src/app/shared/shared.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +9,13 @@ import { Component, Input } from '@angular/core';
 export class NavbarComponent {
 
   @Input() Drawer: any;
+  usuarioLogado:string="";
+
+  constructor(private shared:SharedService){
+    shared.getUsername().subscribe((retorno)=>{
+      this.usuarioLogado=retorno;
+    })
+  }
 
   public showMenu(){
     this.Drawer.toggle();

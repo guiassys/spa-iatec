@@ -20,3 +20,12 @@
 .logo {
   float: right;
 }
+
+.div-logged-user{
+  position: relative;
+  width: 100%;
+}
+
+.logged-user{
+  float: right;
+}
