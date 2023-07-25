@@ -20,7 +20,7 @@ export class LoginComponent {
   }
 
   btnLogin():void{
-    if(this.username==="guilherme.assis" && this.password==="admin"){
+    if((this.username==="guilherme.assis" || this.username==="admin")  && this.password==="admin"){
       console.log("Autenticação realizada com sucesso");
       this.message="CORRETO!";
       this.shared.setUsername(this.username);
