@@ -21,6 +21,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { SlidebarComponent } from './components/slidebar/slidebar.component';
+import { AuthGuardService } from './shared/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import { SlidebarComponent } from './components/slidebar/slidebar.component';
     MatToolbarModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
