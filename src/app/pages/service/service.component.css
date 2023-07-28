@@ -1,4 +1,5 @@
 .service-card {
   max-width: 400px;
   margin: 20px;
+  border-radius: var(--mdc-elevated-card-container-shape, var(--mdc-shape-medium, 4px));
 }

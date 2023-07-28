@@ -2,3 +2,8 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-card-top{
+  border-radius: 0px;
+  background-color: rgb(197, 148, 113);
+}
