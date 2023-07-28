@@ -1,0 +1,19 @@
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.direita{
+  text-align: right;
+}
+
+.login-message{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}

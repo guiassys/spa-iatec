@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { AboutComponent } from './pages/about/about.component';
+import { LogoutComponent } from './pages/logout/logout.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuardService } from './shared/auth-guard.service';
 
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'contact', component: ContactComponent, canActivate:[AuthGuardService]},
   {path: 'service', component: ServiceComponent, canActivate:[AuthGuardService]},
   {path: 'about', component: AboutComponent, canActivate:[AuthGuardService]},
+  {path: 'logout', component: LogoutComponent, canActivate:[AuthGuardService]},
   {path: 'login', component: LoginComponent},
   {path: '', redirectTo: 'login', pathMatch: 'full' },
 ];

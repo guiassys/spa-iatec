@@ -22,6 +22,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { SlidebarComponent } from './components/slidebar/slidebar.component';
 import { AuthGuardService } from './shared/auth-guard.service';
+import { LogoutComponent } from './pages/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { AuthGuardService } from './shared/auth-guard.service';
     SlidebarComponent,
     FooterComponent,
     LoginComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
