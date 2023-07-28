@@ -1,24 +1,8 @@
 
     <!-- lista de menu -->
     <mat-list role="list">
-      <mat-list-item role="listitem">
-        <mat-icon aria-hidden="false" aria-label="Login" fontIcon="login"></mat-icon>
-        <a class="nav-link" routerLink="login">Login</a>
-      </mat-list-item>
-      <mat-list-item role="listitem">
-        <mat-icon aria-hidden="false" aria-label="Home icon" fontIcon="home"></mat-icon>
-        <a class="nav-link" routerLink="home">Home</a>
-      </mat-list-item>
-      <mat-list-item role="listitem">
-        <mat-icon aria-hidden="false" aria-label="About icon" fontIcon="info"></mat-icon>
-        <a class="nav-link" routerLink="about">Sobre</a>
-      </mat-list-item>
-      <mat-list-item role="listitem">
-        <mat-icon aria-hidden="false" aria-label="Contact icon" fontIcon="contact_page"></mat-icon>
-        <a class="nav-link" routerLink="contact">Contato</a>
-      </mat-list-item>
-      <mat-list-item role="listitem">
-        <mat-icon aria-hidden="false" aria-label="Serviços" fontIcon="miscellaneous_services"></mat-icon>
-        <a class="nav-link" routerLink="service">Serviços</a>
+      <mat-list-item *ngFor="let menu of listMenu" role="listitem">
+        <mat-icon aria-hidden="false" fontIcon="{{menu.fontIcon}}"></mat-icon>
+        <a class="nav-link" routerLink="{{menu.routerLink}}">{{menu.label}}</a>
       </mat-list-item>
     </mat-list>
