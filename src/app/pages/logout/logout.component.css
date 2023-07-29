@@ -3,11 +3,6 @@
   justify-content: center;
 }
 
-.login-form{
-  display: flex;
-  flex-direction: column;
-}
-
 .direita{
   text-align: right;
 }

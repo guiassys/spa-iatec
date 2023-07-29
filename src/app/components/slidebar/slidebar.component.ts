@@ -58,6 +58,11 @@ export class SlidebarComponent implements OnInit {
           fontIcon: 'miscellaneous_services',
           routerLink: 'service',
         },
+        {
+          label: 'Usuários',
+          fontIcon: 'manage_accounts',
+          routerLink: 'user',
+        },
       ];
     }else{
       this.listMenu = [

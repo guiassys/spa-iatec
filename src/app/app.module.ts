@@ -15,6 +15,7 @@ import { MatIconModule} from '@angular/material/icon';
 import { MatButtonModule} from '@angular/material/button';
 import { MatInputModule} from '@angular/material/input';
 import { MatCardModule} from '@angular/material/card';
+import { MatTableModule} from '@angular/material/table';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
@@ -23,6 +24,7 @@ import { ServiceComponent } from './pages/service/service.component';
 import { SlidebarComponent } from './components/slidebar/slidebar.component';
 import { AuthGuardService } from './shared/auth-guard.service';
 import { LogoutComponent } from './pages/logout/logout.component';
+import { UserComponent } from './pages/user/user.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { LogoutComponent } from './pages/logout/logout.component';
     FooterComponent,
     LoginComponent,
     LogoutComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ import { LogoutComponent } from './pages/logout/logout.component';
     MatFormFieldModule,
     MatToolbarModule,
     FormsModule,
+    MatTableModule,
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]
