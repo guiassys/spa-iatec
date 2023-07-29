@@ -25,6 +25,7 @@ import { SlidebarComponent } from './components/slidebar/slidebar.component';
 import { AuthGuardService } from './shared/auth-guard.service';
 import { LogoutComponent } from './pages/logout/logout.component';
 import { UserComponent } from './pages/user/user.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { UserComponent } from './pages/user/user.component';
     MatToolbarModule,
     FormsModule,
     MatTableModule,
+    HttpClientModule,
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]
