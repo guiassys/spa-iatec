@@ -3,7 +3,7 @@
     <mat-card-title>Formulário de contato</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-      <mat-card-subtitle>Agradecemos o seu contato! Envie-nos a sua mensagem, e nossa equipe responderá em breve.</mat-card-subtitle>
+      <mat-card-subtitle>Envie-nos a sua mensagem, e nossa equipe responderá em breve.</mat-card-subtitle>
   </mat-card-content>
 </mat-card>
 <p>
@@ -22,13 +22,16 @@
         </mat-form-field>
         <mat-form-field>
           <mat-label>Mensagem</mat-label>
-          <textarea [(ngModel)]="mensagem"  name="mensagem" matInput placeholder="Informe a mensagem"></textarea>
+          <textarea required [(ngModel)]="mensagem"  name="mensagem" matInput placeholder="Informe a mensagem"></textarea>
         </mat-form-field>
         <div class="example-button-row direita">
           <button mat-button color="primary" (click)="sendForm()" >Enviar</button>
         </div>
       </div>
     </mat-card-content>
+    <mat-card-footer class="mat-card-footer-center">
+      <mat-label>{{info}}</mat-label>
+    </mat-card-footer>
   </mat-card>
 </div>
 <p>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -10,18 +11,27 @@ export class ContactComponent {
   nome:string;
   email:string;
   mensagem:string;
+  info:string;
 
-  constructor(){
+  constructor(private router:Router,){
     this.nome="";
     this.email="";
     this.mensagem="";
+    this.info = "";
   }
 
   sendForm():void{
-
-    console.log("Formulário enviado");
-    console.log(this.nome);
-    console.log(this.email);
-    console.log(this.mensagem);
+    if(this.nome && this.email && this.mensagem){
+      console.log("Formulário enviado");
+      this.info="Agradecemos o seu contato!"
+      setTimeout(()=>{
+        this.nome="";
+        this.email="";
+        this.mensagem="";
+        this.info = "";
+        this.router.navigate(['home']);
+      }, 3000);
+    }
   }
+
 }
