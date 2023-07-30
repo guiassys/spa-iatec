@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { UserModel } from 'src/app/pages/user/models/user.model';
 import { UserdetailsModel } from 'src/app/pages/user/models/userdetails.model';
 import { SharedService } from 'src/app/shared/shared.service';
 
 @Component({
-  selector: 'app-showdetails',
-  templateUrl: './showdetails.component.html',
-  styleUrls: ['./showdetails.component.css']
+  selector: 'app-userdetails',
+  templateUrl: './userdetails.component.html',
+  styleUrls: ['./userdetails.component.css']
 })
-export class ShowdetailsComponent {
+export class UserdetailsComponent {
 
   subscription !: Subscription;
   selecteduser:UserdetailsModel= {id:0, name:'', email:'', phone:'', website:''};

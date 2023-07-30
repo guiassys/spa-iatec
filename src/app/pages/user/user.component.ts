@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserModel } from './models/user.model';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmdialogComponent } from 'src/app/components/confirmdialog/confirmdialog.component';
-import { ShowdetailsComponent } from 'src/app/components/showdetails/showdetails.component';
+import { UserdetailsComponent } from '../userdetails/userdetails.component';
 import { SharedService } from 'src/app/shared/shared.service';
 import { UserdetailsModel } from './models/userdetails.model';
 
@@ -80,7 +80,7 @@ export class UserComponent implements OnInit {
 
   openShowDetailsDialog(user:UserModel) {
 
-    const dialogRef = this.dialog.open(ShowdetailsComponent);
+    const dialogRef = this.dialog.open(UserdetailsComponent);
       // recupera informações do usuário selecionado
       this.userService.getUserDetailById(user.id).subscribe((resultado:UserdetailsModel)=>{
       // colocar o usuário no serviço de compartilhameto
