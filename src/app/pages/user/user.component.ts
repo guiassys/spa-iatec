@@ -1,6 +1,8 @@
 import { UserService } from './services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { UserModel } from './models/user.model';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmdialogComponent } from 'src/app/components/confirmdialog/confirmdialog.component';
 
 @Component({
   selector: 'app-user',
@@ -9,7 +11,7 @@ import { UserModel } from './models/user.model';
 })
 export class UserComponent implements OnInit {
 
-  constructor(private userService:UserService){}
+  constructor(private userService:UserService, private dialog: MatDialog){}
 
   dataSource:UserModel[] = [];
 
@@ -56,6 +58,17 @@ export class UserComponent implements OnInit {
     this.userAdd.email = "";
   }
 
+  openConfirmationDialog(user:UserModel) {
+    const dialogRef = this.dialog.open(ConfirmdialogComponent);
 
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        console.log('Usuário confirmou a ação.');
+        this.btnDelete(user);
+      } else {
+        console.log('Usuário cancelou a ação.');
+      }
+    });
+  }
 
 }

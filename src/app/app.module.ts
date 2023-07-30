@@ -26,6 +26,8 @@ import { AuthGuardService } from './shared/auth-guard.service';
 import { LogoutComponent } from './pages/logout/logout.component';
 import { UserComponent } from './pages/user/user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ConfirmdialogComponent } from './components/confirmdialog/confirmdialog.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     LogoutComponent,
     UserComponent,
+    ConfirmdialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     MatTableModule,
     HttpClientModule,
+    MatDialogModule,
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]
