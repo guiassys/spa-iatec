@@ -43,7 +43,7 @@
   <ng-container matColumnDef="action">
     <th mat-header-cell *matHeaderCellDef> Ações </th>
     <td mat-cell *matCellDef="let user">
-      <button mat-icon-button (click)="btnSearch(user)">
+      <button mat-icon-button (click)="openShowDetailsDialog(user)">
         <mat-icon>search</mat-icon>
       </button>
       <button mat-icon-button (click)="openConfirmationDialog(user)">

@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { UserModel } from './models/user.model';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmdialogComponent } from 'src/app/components/confirmdialog/confirmdialog.component';
+import { ShowdetailsComponent } from 'src/app/components/showdetails/showdetails.component';
+import { SharedService } from 'src/app/shared/shared.service';
+import { UserdetailsModel } from './models/userdetails.model';
 
 @Component({
   selector: 'app-user',
@@ -11,7 +14,11 @@ import { ConfirmdialogComponent } from 'src/app/components/confirmdialog/confirm
 })
 export class UserComponent implements OnInit {
 
-  constructor(private userService:UserService, private dialog: MatDialog){}
+  constructor(
+    private userService:UserService,
+    private dialog: MatDialog,
+    private shared: SharedService,
+  ){}
 
   dataSource:UserModel[] = [];
 
@@ -65,6 +72,26 @@ export class UserComponent implements OnInit {
       if (result) {
         console.log('Usuário confirmou a ação.');
         this.btnDelete(user);
+      } else {
+        console.log('Usuário cancelou a ação.');
+      }
+    });
+  }
+
+  openShowDetailsDialog(user:UserModel) {
+
+    const dialogRef = this.dialog.open(ShowdetailsComponent);
+      // recupera informações do usuário selecionado
+      this.userService.getUserDetailById(user.id).subscribe((resultado:UserdetailsModel)=>{
+      // colocar o usuário no serviço de compartilhameto
+      this.shared.setSelecteduser(resultado);
+    });
+
+
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        console.log('Usuário confirmou a ação.');
       } else {
         console.log('Usuário cancelou a ação.');
       }

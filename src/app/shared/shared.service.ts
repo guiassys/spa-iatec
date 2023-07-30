@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { UserModel } from '../pages/user/models/user.model';
+import { UserdetailsModel } from '../pages/user/models/userdetails.model';
 
 
 @Injectable({
@@ -8,6 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 export class SharedService {
 
   private _username: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  private _selecteduser: BehaviorSubject<UserdetailsModel> = new BehaviorSubject<UserdetailsModel>({id: 0, name:'', email:'', phone: '', website:''});
   constructor() { }
 
   isAuthenticated():boolean{
@@ -26,4 +29,13 @@ export class SharedService {
   getUsername(){
     return this._username.asObservable();
   }
+
+  setSelecteduser(selecteduser: UserdetailsModel){
+    this._selecteduser.next(selecteduser);
+  }
+
+  getSelecteduser(){
+    return this._selecteduser.asObservable();
+  }
+
 }

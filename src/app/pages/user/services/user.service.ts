@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UserModel } from '../models/user.model';
 import { Observable } from 'rxjs';
+import { UserdetailsModel } from '../models/userdetails.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,11 @@ export class UserService {
   //users/1
   getById(id: number): Observable<UserModel> {
     return this.http.get<UserModel>(`${this.baseUrl}/users/${id}`);
+  }
+
+  //users/1
+  getUserDetailById(id: number): Observable<UserdetailsModel> {
+    return this.http.get<UserdetailsModel>(`${this.baseUrl}/users/${id}`);
   }
 
   //users

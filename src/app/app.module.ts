@@ -28,6 +28,7 @@ import { UserComponent } from './pages/user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ConfirmdialogComponent } from './components/confirmdialog/confirmdialog.component';
+import { ShowdetailsComponent } from './components/showdetails/showdetails.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ConfirmdialogComponent } from './components/confirmdialog/confirmdialog
     LogoutComponent,
     UserComponent,
     ConfirmdialogComponent,
+    ShowdetailsComponent,
   ],
   imports: [
     BrowserModule,
