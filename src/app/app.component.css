@@ -10,6 +10,7 @@
 
 .example-sidenav {
   background-color: #ccc;
+  background-image: url('../assets/aco-escovado-branco.png');
   opacity: 90%;
   width: 200px;
 }

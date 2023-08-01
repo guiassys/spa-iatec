@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { UserModel } from '../pages/user/models/user.model';
-import { UserdetailsModel } from '../pages/user/models/userdetails.model';
+import { UserdetailsModel } from '../pages/userdetails/models/userdetails.model';
 
 
 @Injectable({

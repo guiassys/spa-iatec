@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ConfirmdialogComponent } from 'src/app/components/confirmdialog/confirmdialog.component';
 import { UserdetailsComponent } from '../userdetails/userdetails.component';
 import { SharedService } from 'src/app/shared/shared.service';
-import { UserdetailsModel } from './models/userdetails.model';
+import { UserdetailsModel } from '../userdetails/models/userdetails.model';
 
 @Component({
   selector: 'app-user',

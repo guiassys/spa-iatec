@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { UserdetailsModel } from 'src/app/pages/user/models/userdetails.model';
+import { UserdetailsModel } from 'src/app/pages/userdetails/models/userdetails.model';
 import { SharedService } from 'src/app/shared/shared.service';
 
 @Component({
